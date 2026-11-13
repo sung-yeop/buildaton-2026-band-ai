@@ -1,0 +1,68 @@
+name: band-local-infra
+
+services:
+  cognee:
+    image: cognee/cognee-mcp:main@sha256:a72ebbcc3384a7d1e2fe9792da57569e46e8a81d10c62252ad984b02685178a3
+    ports:
+      - "127.0.0.1:8765:8000"
+    environment:
+      TRANSPORT_MODE: http
+      HTTP_PORT: "8000"
+      LLM_API_KEY: ${LLM_API_KEY:?Set LLM_API_KEY in infra/.env}
+      LLM_PROVIDER: openai
+      LLM_MODEL: ${LLM_MODEL:?Set LLM_MODEL in infra/.env}
+      EMBEDDING_PROVIDER: openai
+      EMBEDDING_MODEL: text-embedding-3-small
+      EMBEDDING_DIMENSIONS: "1536"
+      EMBEDDING_API_KEY: ${LLM_API_KEY:?Set LLM_API_KEY in infra/.env}
+      DB_PROVIDER: sqlite
+      VECTOR_DB_PROVIDER: lancedb
+      GRAPH_DATABASE_PROVIDER: ladybug
+      SYSTEM_ROOT_DIRECTORY: /cognee-storage/system
+      DATA_ROOT_DIRECTORY: /cognee-storage/data
+      COGNEE_MCP_AGENT_SCOPED: "false"
+      ENABLE_BACKEND_ACCESS_CONTROL: "false"
+      KUZU_BUFFER_POOL_SIZE: "536870912"
+    volumes:
+      - cognee_system:/cognee-storage/system
+      - cognee_data:/cognee-storage/data
+    networks: [memory]
+    cpus: 2
+    mem_limit: 4g
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=5)"]
+      interval: 15s
+      timeout: 10s
+      start_period: 60s
+      retries: 8
+
+  neo4j:
+    image: neo4j:5.26-community@sha256:577eb43120e8688e62e753e962c47d30044ecaa95147ee5386c29f226b878008
+    ports:
+      - "127.0.0.1:7474:7474"
+      - "127.0.0.1:7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:?Set NEO4J_PASSWORD in infra/.env}
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 1g
+      NEO4J_server_memory_pagecache_size: 256m
+    volumes:
+      - neo4j_data:/data
+    networks: [knowledge]
+    cpus: 2
+    mem_limit: 2g
+    healthcheck:
+      test: [CMD-SHELL, 'cypher-shell -a bolt://localhost:7687 -u neo4j -p "$${NEO4J_AUTH#*/}" "RETURN 1;" >/dev/null']
+      interval: 15s
+      timeout: 10s
+      start_period: 60s
+      retries: 8
+
+networks:
+  memory:
+  knowledge:
+
+volumes:
+  cognee_system:
+  cognee_data:
+  neo4j_data:

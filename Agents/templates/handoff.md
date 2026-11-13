@@ -1,27 +1,27 @@
-# 구현 인수인계
+# Implementation Handoff
 
-- Band Task 번호:
-- 보낸 사람 / 다음 담당자 @handle:
-- 결과: 검증 요청 / 차단
-- 결과 저장소 절대경로:
-- 검증할 작업 디렉터리:
-- 전체 커밋 SHA:
-- 변경 파일·동작:
+- Band Task ID:
+- Sender / next owner @handle:
+- Outcome: ready for verification / blocked
+- Absolute result repository path:
+- Working directory to verify:
+- Full commit SHA:
+- Changed files and behavior:
 
-## 전체 작업과 해당 요구사항 전문
+## Complete task and full relevant requirements
 
-수신자가 다른 메시지를 찾지 않아도 작업을 이해하도록 전체 설명과 요구사항을 포함합니다.
+Include the entire description and requirements so the recipient can understand the task without finding other messages.
 
-## 검증 근거
+## Verification evidence
 
-- 실행 명령과 환경:
-- 종료 코드·통과·실패 결과:
-- 로그·보고서 절대경로:
+- Commands and environment:
+- Exit codes, passes, and failures:
+- Absolute log and report paths:
 
-## 남은 사항
+## Remaining work
 
-- 미검증 항목:
-- 차단 원인과 재개에 필요한 조건:
-- 다음 담당자가 수행할 일:
+- Unverified items:
+- Blocker and condition needed to resume:
+- Next owner's actions:
 
-검증 요청은 최종 완료 선언이 아닙니다.
+A verification request is not a declaration of final completion.

@@ -1,28 +1,28 @@
-# 작업 배정
+# Task Assignment
 
-- Band Task 번호:
-- 목표:
-- 주 담당자 @handle:
-- 선행 작업 번호와 해제 조건:
-- 결과 저장소 절대경로:
-- 작업 디렉터리 또는 worktree:
-- 기준 전체 커밋 SHA:
-- 수정 담당 파일·모듈:
-- 범위 밖 항목:
+- Band Task ID:
+- Goal:
+- Primary owner @handle:
+- Prerequisite task IDs and unblock conditions:
+- Absolute result repository path:
+- Working directory or worktree:
+- Full base commit SHA:
+- Owned files and modules:
+- Out of scope:
 
-## 요구사항 전문
+## Full requirements
 
-현재 작업에 해당하는 원문 요구사항을 생략 없이 전달합니다. 링크·작업 번호만으로 대체하지 않습니다. 긴 경우 번호가 있는 직접 메시지로 나눕니다.
+Include the original requirements relevant to this task without omissions. Links and task IDs are not substitutes. Split long requirements into numbered direct messages.
 
-## 인터페이스와 완료 조건
+## Interfaces and completion criteria
 
-- 합의된 계약과 근거:
-- 관찰 가능한 완료 조건:
+- Agreed contract and rationale:
+- Observable completion criteria:
 
-## 검증 계획
+## Verification plan
 
-- 실행할 검증과 기대 결과:
-- 검증 담당자:
-- 공용 파일·Git 작업·검사 자원 사용 순서:
+- Checks to run and expected results:
+- Verification owner:
+- Order of shared-file edits, Git operations, and verification resource use:
 
-상태는 Band Room tasks에서 갱신합니다. 이 본문에 별도 상태표를 중복 운영하지 않습니다.
+Update status in Band Room tasks. Do not maintain a duplicate status table in this body.

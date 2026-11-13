@@ -1,29 +1,29 @@
-# 독립 검증 보고
+# Independent Verification Report
 
-- Band Task 번호:
-- 검증자 @handle / 역할: Reviewer 또는 QA
-- 대상 저장소·작업 디렉터리:
-- 전체 커밋 SHA:
-- 판정: 승인 / 반려 / 검증 불가
+- Band Task ID:
+- Verifier @handle / role: Reviewer or QA
+- Target repository and working directory:
+- Full commit SHA:
+- Verdict: approve / reject / unverified
 
-## 범위와 근거
+## Scope and evidence
 
-- 직접 확인한 요구사항:
-- 실행 명령·환경:
-- 종료 코드·검사 수·통과·실패·건너뜀:
-- 증거 파일 절대경로:
-- 다른 검증자의 증거를 활용한 항목과 해당 SHA:
+- Requirements checked directly:
+- Commands and environment:
+- Exit codes, total checks, passes, failures, and skips:
+- Absolute evidence paths:
+- Reused evidence from another verifier and its target SHA:
 
-## 발견사항
+## Findings
 
-- 관련 요구사항과 영향:
-- 준비 조건과 재현 절차:
-- 기대 결과:
-- 실제 결과:
-- 담당자와 수정 후 재검증 조건:
+- Relevant requirement and impact:
+- Setup and reproduction steps:
+- Expected result:
+- Actual result:
+- Repair owner and conditions for retesting:
 
-## 제한사항
+## Limitations
 
-- 미실행·미확인 항목과 이유:
-- 검증 중 대상 코드가 바뀌었는지:
-- 전체 완료 판단 전에 남은 조건:
+- Unexecuted or unverified items and reasons:
+- Whether target code changed during verification:
+- Conditions remaining before overall completion:
