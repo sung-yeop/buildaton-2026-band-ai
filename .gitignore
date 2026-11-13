@@ -1,0 +1,16 @@
+# Local challenge package and independent result repositories.
+/sf-buildathon-2026/
+/band-work/
+
+# Credentials, machine-specific overrides and generated artifacts.
+.env
+.env.*
+!.env.example
+*.local.*
+.venv/
+__pycache__/
+.DS_Store
+
+# Raw Band exports may include credentials and private tool output.
+room.json
+room-[1-4].json
