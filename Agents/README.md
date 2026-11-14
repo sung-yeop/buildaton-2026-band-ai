@@ -4,7 +4,7 @@
 
 - **Buildathon Crew** was created on 2026-11-13 with the six roles below, linked instructions, and a saved copy of `common.md` as team guidelines.
 - Earlier practice agents remain separate: `@yeop99/coordinator`, `@yeop99/code-author`, and `@yeop99/code-reviewer`.
-- All six agents now have a room session. Their policy is **Never ask + Workspace write**, verified after restart; task progress was not audited during that settings change. Their initial shared directory is `band-work/team-workspace`; assign a result repository and isolated worktrees before parallel implementation.
+- All six agents now have a room session. Their owner-selected policy is **Never ask + Full access**, verified after restart; task progress was not audited during that settings change. Their initial shared directory is `band-work/team-workspace`; assign a result repository and isolated worktrees before parallel implementation.
 - [runtime-settings.md](runtime-settings.md) records saved settings read on 2026-11-13, not necessarily the effective settings of every running session.
 
 | Role | Instructions | Responsibility |

@@ -2,14 +2,14 @@
 
 ## Buildathon Crew — created 2026-11-13
 
-All six `build-*` agents use the following saved settings, read back after creation:
+All six `build-*` agents use the following settings, read back after the latest owner-requested update:
 
 | Setting | Value |
 |---|---|
 | Harness / transport | Codex / `codex-app-server` |
 | Model / effort | `gpt-6.1-sol` / `medium` |
 | Runtime authentication | `subscription` |
-| Approval / tool sandbox | `never` / `workspace-write` |
+| Approval / tool sandbox | `never` / `danger-full-access` |
 | Working directory | Absolute local path to `band-work/team-workspace` |
 | Executable | Installed native Codex binary, reported version `0.168.0` |
 | Role instructions | Live-linked matching file under `Agents/roles/` |
@@ -19,7 +19,9 @@ The shared launch configuration passed Band's dry-run probe: process startup, pr
 
 The workspace was created as an empty staging directory, not an initialized result repository. Select the actual result repository and separate worktrees before parallel coding. Existing practice agents and rooms were not modified. This record is not evidence of a completed unattended run.
 
-Later on 2026-11-13, the owner requested **Never ask + Workspace write**. All six default sessions and their six existing room sessions were updated, and the room runtimes were restarted. Band's `runtime policy` confirmed `approval_policy: never` and `tool_access: workspace-write` for each room session. The template update command initially reported success without changing the approval value; per-session `runtime settings` followed by restart applied it successfully. Actions outside the workspace sandbox can fail without an approval prompt. Docker access and previously pending approvals were not tested by this settings change.
+On 2026-11-13, **Never ask + Workspace write** was first applied and verified. The rehearsal then reported that its participant lookup could not connect to the Band daemon socket (`Operation not permitted`). A separate read-only sandbox reproduction confirmed that failure; explicitly allowing the Band socket made that test succeed, but that exception was not applied to the Band runtimes.
+
+The owner subsequently requested **Never ask + Full access**. All six default sessions and six existing room sessions were updated, the room runtimes were restarted, and `runtime policy` confirmed `approval_policy: never` and `tool_access: danger-full-access` for each room session. This permits access outside the workspace. The change did not send a resume message, rerun the rehearsal, or verify Docker checks. The template update command previously reported success without changing the approval value; use per-session `runtime settings`, restart, and read back `runtime policy` to verify changes.
 
 ## Earlier practice team snapshot
 
