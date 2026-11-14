@@ -9,7 +9,7 @@ All six `build-*` agents use the following saved settings, read back after creat
 | Harness / transport | Codex / `codex-app-server` |
 | Model / effort | `gpt-6.1-sol` / `medium` |
 | Runtime authentication | `subscription` |
-| Approval / tool sandbox | `on-request` / `workspace-write` |
+| Approval / tool sandbox | `never` / `workspace-write` |
 | Working directory | Absolute local path to `band-work/team-workspace` |
 | Executable | Installed native Codex binary, reported version `0.168.0` |
 | Role instructions | Live-linked matching file under `Agents/roles/` |
@@ -17,7 +17,9 @@ All six `build-*` agents use the following saved settings, read back after creat
 
 The shared launch configuration passed Band's dry-run probe: process startup, protocol handshake, authentication, and clean shutdown. All six saved instruction paths are readable and supported, and the team has exactly six members. No model inference, room handoff, Docker test, or implementation task was performed. Saved subscription mode is not an audit of account billing or extra-usage settings.
 
-The initial workspace is an empty staging directory, not an initialized result repository. Select the actual result repository and separate worktrees before parallel coding. Existing practice agents and rooms were not modified. Runtime settings apply to new sessions; this record is not evidence of a completed unattended run.
+The workspace was created as an empty staging directory, not an initialized result repository. Select the actual result repository and separate worktrees before parallel coding. Existing practice agents and rooms were not modified. This record is not evidence of a completed unattended run.
+
+Later on 2026-11-13, the owner requested **Never ask + Workspace write**. All six default sessions and their six existing room sessions were updated, and the room runtimes were restarted. Band's `runtime policy` confirmed `approval_policy: never` and `tool_access: workspace-write` for each room session. The template update command initially reported success without changing the approval value; per-session `runtime settings` followed by restart applied it successfully. Actions outside the workspace sandbox can fail without an approval prompt. Docker access and previously pending approvals were not tested by this settings change.
 
 ## Earlier practice team snapshot
 
