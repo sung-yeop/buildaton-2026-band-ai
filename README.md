@@ -7,7 +7,7 @@ Role instructions, operating rules, task templates, and runtime records for a de
 - [Recorded runtime settings](Agents/runtime-settings.md)
 - [Local infrastructure: Cognee memory and an independent Neo4j graph](infra/README.md)
 
-The current practice team uses Coordinator, Code Author, and Code Reviewer. The six-role instructions are a proposed configuration; saving these files does not change Band settings.
+The six-role **Buildathon Crew** team is registered in the owner's Band Desktop profile, with linked role instructions and shared team guidelines. The earlier practice agents (Coordinator, Code Author, and Code Reviewer) remain separate. Saving files alone does not create agents on another machine.
 
 This repository manages the development factory. Keep judged result repositories and official challenge materials separate. Local `band-work/`, `sf-buildathon-2026/`, and raw room exports are excluded by `.gitignore`.
 

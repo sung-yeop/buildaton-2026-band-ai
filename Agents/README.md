@@ -2,8 +2,9 @@
 
 ## Status
 
-- Current practice team: `@yeop99/coordinator`, `@yeop99/code-author`, and `@yeop99/code-reviewer`.
-- The six roles below are the agreed team design. They have not yet been created, switched over, or applied to Band.
+- **Buildathon Crew** was created on 2026-11-13 with the six roles below, linked instructions, and a saved copy of `common.md` as team guidelines.
+- Earlier practice agents remain separate: `@yeop99/coordinator`, `@yeop99/code-author`, and `@yeop99/code-reviewer`.
+- The new team has not been added to a room or given an implementation task. Its initial shared directory is `band-work/team-workspace`; assign a result repository and isolated worktrees before parallel implementation.
 - [runtime-settings.md](runtime-settings.md) records saved settings read on 2026-11-13, not necessarily the effective settings of every running session.
 
 | Role | Instructions | Responsibility |
@@ -16,6 +17,23 @@
 | QA | [qa.md](roles/qa.md) | Runtime verification, defect reproduction, retesting |
 
 Do not invent UI work to keep Frontend busy when the current requirements have no UI. The original implementer repairs defects; there is no separate Repair role.
+
+## Created handles
+
+| Role | Actual handle |
+|---|---|
+| Coordinator | `@yeop99/build-coordinator` |
+| Planner | `@yeop99/build-planner` |
+| Backend | `@yeop99/build-backend` |
+| Frontend / Integrator | `@yeop99/build-frontend` |
+| Reviewer | `@yeop99/build-reviewer` |
+| QA | `@yeop99/build-qa` |
+
+Open **Teams → Buildathon Crew → New room** to use the saved roster and guidelines. Add the human teammate to that room through Participants after establishing the required contact or organization relationship. A saved Team is a reusable agent group, not an organization or a public-directory listing. Another person's **This machine** view does not list agents hosted on this computer.
+
+For discovery outside the room, use an approved agent contact or **Share with my organization** when both owners belong to the same organization. Public listing is separate and still requires contact approval for messaging. No discovery settings or teammate contacts were changed during team creation. See [Band permissions and visibility](https://docs.band.ai/security/permissions-and-visibility).
+
+Role files are live-linked; the team's guidelines were copied at creation. After changing `common.md`, update Team guidelines and check the intended rooms rather than assuming the saved copy updates automatically. To preserve the full rules, add the team to a room as a team instead of adding its agents individually.
 
 ## Apply in Band
 

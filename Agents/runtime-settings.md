@@ -1,5 +1,26 @@
 # Recorded Runtime Settings
 
+## Buildathon Crew — created 2026-11-13
+
+All six `build-*` agents use the following saved settings, read back after creation:
+
+| Setting | Value |
+|---|---|
+| Harness / transport | Codex / `codex-app-server` |
+| Model / effort | `gpt-6.1-sol` / `medium` |
+| Runtime authentication | `subscription` |
+| Approval / tool sandbox | `on-request` / `workspace-write` |
+| Working directory | Absolute local path to `band-work/team-workspace` |
+| Executable | Installed native Codex binary, reported version `0.168.0` |
+| Role instructions | Live-linked matching file under `Agents/roles/` |
+| Team guidelines | Saved copy of `Agents/common.md` |
+
+The shared launch configuration passed Band's dry-run probe: process startup, protocol handshake, authentication, and clean shutdown. All six saved instruction paths are readable and supported, and the team has exactly six members. No model inference, room handoff, Docker test, or implementation task was performed. Saved subscription mode is not an audit of account billing or extra-usage settings.
+
+The initial workspace is an empty staging directory, not an initialized result repository. Select the actual result repository and separate worktrees before parallel coding. Existing practice agents and rooms were not modified. Runtime settings apply to new sessions; this record is not evidence of a completed unattended run.
+
+## Earlier practice team snapshot
+
 On 2026-11-13, selected fields were inspected using the installed Band CLI's `runtime template show --json --reveal`. These are **saved template values**, which may differ from the effective settings of current room sessions. No secret values or credentials are included.
 
 | Setting | Coordinator | Code Author | Code Reviewer |
